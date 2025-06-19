@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html dir="auto" lang="ru">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <title>SovcomDC - наш внутренний WWDC</title>
+        <meta name="description" content="SovcomDC" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="content/image/logo_app_favicon.png" />
+        
+        <meta property="og:title" content="SovcomDC" />
+        <meta property="og:description" content="SovcomDC - наш внутренний WWDC" />
+        <meta property="og:image" content="https://sovcomdc.ru/content/image/logo_app.png" />
+        <meta property="og:url" content="https://sovcomdc.ru/" />
+        
+        <link rel="stylesheet" href="assets/style.css" />
+        <link rel="stylesheet" href="assets/menu.css" />
+        <link rel="stylesheet" href="assets/tobi.css" />
+        <link rel="canonical" href="https://sovcomdc.ru/" />
+    </head>
+    
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        
+        <ul class="menu__box">
+            <li><a title="Отправить письмо" class="menu__item" href="mailto:support@sovcomdc.ru">Отправить письмо</a></li>
+        </ul>
+    </div>
+    
+    <body>
+        <main>
+            <header class="app__header container">
+                <div class="app__logo-wrapper"> <img class="app__logo" src="content/image/logo_app.png" alt="SovcomDC"></div>
+                <div class="app__infos">
+                    <h1 class="app__name">SovcomDC</h1>
+                    <p class="app__description">Наш внутренний WWDC</p>
+                    <div class="app__buttons app__buttons--desktop">
+                        <a href="https://testflight.apple.com/join/GcWCRap6" class="app__button-play" target="_blank" title="Download on the App Store">
+                            <img src="assets/ios-badge.png" alt="Download on the App Store">
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="app__buttons app__buttons--mobile container">
+                <a href="https://testflight.apple.com/join/GcWCRap6" class="app__button-play" target="_blank" title="Download on the App Store">
+                    <img src="assets/ios-badge.png" alt="Download on the App Store">
+                </a>
+            </div>
+            <section class="app__screenshots app__section">
+                <div class="container">
+                    <h2 class="app__section-title">Обзор</h2>
+                </div>
+                <div class="app__screenshots-wrapper container-desktop">
+                    <div class="app__screenshots-list">
+                        <a title="" href="content/image/app_store_1.png" class="lightbox">
+                            <img src="content/image/app_store_1.png" class="app__screenshot" />
+                        </a>
+                        <a title="" href="content/image/app_store_2.png" class="lightbox">
+                            <img src="content/image/app_store_2.png" class="app__screenshot" />
+                        </a>
+                        <a title="" href="content/image/app_store_3.png" class="lightbox">
+                            <img src="content/image/app_store_3.png" class="app__screenshot" />
+                        </a>
+                        <a title="" href="content/image/app_store_4.png" class="lightbox">
+                            <img src="content/image/app_store_4.png" class="app__screenshot" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="app__fulldescription app__section container">
+                <h2 class="app__section-title">Описание</h2>
+                <div class="app__fulldescription-content">
+                    <p>SovcomDC – внутренняя платформа для сотрудников, вдохновлённая WWDC.
+                    Здесь собраны лучшие материалы, чтобы делиться знаниями, вдохновляться и развиваться вместе.<p>
+                    <ul>
+                        <li>Выступления и доклады от коллег</li>
+                        <li>Видео, статьи и новости</li>
+                        <li>Удобная структура и навигация по контенту</li>
+                        <li>Актуальные обновления и новинки</li>
+                    </ul>
+                    <p>Скачайте приложение и будьте в центре внутренних технологий и идей компании.</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__container">
+                    <p class="footer__love">
+                    &copy; 2025 Все права защищены
+                    </p>
+                    <p class="footer__love">
+                    <a title="Политика конфиденциальности" href="privacy-policy">Политика конфиденциальности</a>
+                    </p>
+                    <p class="footer__love">
+                    <a title="Условия использования" href="terms">Условия использования</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <script type="text/javascript" src="assets/tobi.min.js">
+        </script>
+        <script>
+            window.onload = function () {
+                var tobi = new Tobi();
+            };
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var menuToggle = document.getElementById('menu__toggle');
+                var menuBtn = document.querySelector('.menu__btn');
+                
+                if (menuBtn) {
+                    menuBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        menuToggle.checked = !menuToggle.checked;
+                    });
+                }
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                
+                var menuItems = document.querySelectorAll('.menu__box .menu__item');
+                menuItems.forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        
+                        document.getElementById('menu__toggle').checked = false;
+                    });
+                });
+            });
+        </script>
+        
+    </body>
+    
+</html>
